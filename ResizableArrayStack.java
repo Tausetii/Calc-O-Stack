@@ -1,5 +1,5 @@
-import java.util.EmptyStackException;
 import java.util.Arrays;
+import java.util.EmptyStackException;
 
 /**
     A class of stacks whose entries are stored in an array.
@@ -120,19 +120,4 @@ public final class ResizableArrayStack<T> implements StackInterface<T>{
                                             "allowed maximum of " + MAX_CAPACITY);
     }
 
-    public T evaluatePostFix(T[] postfix){
-        StackInterface<T> valueStack = new ResizableArrayStack<>();
-        while(postfix.length > 0){
-            char nextCharacter = postfix.pop();
-            switch(nextCharacter){
-                case '+': case '-': case'*': case '/':
-                    operandTwo = valueStack.pop();
-                    operandOne = valueStack.pop();
-            }
-
-
-    } // end evaluatePostFix
-
-    return valueStack.peek();
-}
 }
