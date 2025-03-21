@@ -8,7 +8,7 @@ Arnav Singh (arnavsingh1@cpp.edu, ArnavSingh121)
 
 Josiah's Role: 
 
-Warren's Role: 
+Warren's Role: ResizableArrayStack.java, evaluatePostfix
 
 Arnav's Role: 
 
