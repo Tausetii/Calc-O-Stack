@@ -6,10 +6,10 @@ Warren Maxwell (wjmaxwell@cpp.edu, Tausetii)
 
 Arnav Singh (arnavsingh1@cpp.edu, ArnavSingh121)
 
-Josiah's Role: 
+Josiah's Role: StackInterface.java, LinkedStack.java, convertToPostfix
 
 Warren's Role: ResizableArrayStack.java, evaluatePostfix
 
-Arnav's Role: 
+Arnav's Role: CalculatorTest.java
 
 Screencast Link: 
