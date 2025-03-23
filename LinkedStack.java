@@ -6,7 +6,7 @@ import java.util.EmptyStackException;
 public final class LinkedStack<T> implements StackInterface<T>
 {
     private Node topNode; // References the first node in the chain
-    /* Default constructor for linked stack */
+    /** Default constructor for linked stack */
     public LinkedStack()
     {
         topNode = null;
