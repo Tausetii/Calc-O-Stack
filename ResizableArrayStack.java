@@ -33,6 +33,7 @@ public final class ResizableArrayStack<T> implements StackInterface<T>{
      * Insert a new item onto the stack.
      * @param newEntry The item to be inserted.
      */
+    @Override
     public void push(T newEntry){
         checkIntegrity();
         ensureCapacity();
@@ -44,6 +45,7 @@ public final class ResizableArrayStack<T> implements StackInterface<T>{
      * Remove the top item from the stack.
      * @return The item that was removed.
      */
+    @Override
     public T pop(){
         checkIntegrity();
         if(isEmpty())
@@ -60,6 +62,7 @@ public final class ResizableArrayStack<T> implements StackInterface<T>{
      * Retrieve the most recent entry of the stack.
      * @return The top item of the stack.
      */
+    @Override
     public T peek(){
         checkIntegrity();
         if(isEmpty())
@@ -72,6 +75,7 @@ public final class ResizableArrayStack<T> implements StackInterface<T>{
      * Determine whether the stack is empty.
      * @return Whether or not the stack is empty.
      */
+    @Override
     public boolean isEmpty(){
         return topIndex < 0;
     } // end isEmpty
@@ -79,6 +83,7 @@ public final class ResizableArrayStack<T> implements StackInterface<T>{
     /**
      * Remove all entries from the stack.
      */
+    @Override
     public void clear(){
 
         checkIntegrity();

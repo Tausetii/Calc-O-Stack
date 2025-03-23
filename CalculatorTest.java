@@ -1,19 +1,30 @@
 import org.junit.*;
 
+/**
+ * A class for testing Calculator
+ * @author Arnav Singh
+ */
 public class CalculatorTest {
+    /**
+     * Main function which performs the tests specified in tasks 3 and 6
+     * @param args
+     */
     public static void main(String[] args) {
         Calculator calculator = new Calculator();
         String infix = "a*b/(c-a)+d*e";
         String result1 = calculator.convertToPostfix(infix);
         System.out.println(infix + " in postfix is: \n" + result1);
 
-        // a b * c a - / d e * +
+        // ab*ca-/de*+
         // a = 2, b = 3, c = 4, d = 5, e = 6
         String postfix = "23*42-/56*+";
         double result2 = calculator.evaluatePostFix(postfix);
         System.out.println(postfix + " = " + result2);
     }
 
+    /**
+     * Tests the method ConvertToPostfix
+     */
     @Test
     public void testConvertToPostfix() {
         Calculator calculator = new Calculator();
@@ -28,6 +39,9 @@ public class CalculatorTest {
         Assert.assertEquals(calculator.convertToPostfix("a-(b/(c-d)*e+f)^g"), "abcd-/e*f+g^-");
     }
 
+    /**
+     * Tests the method evaluatePostFix
+     */
     @Test
     public void testEvaluatePostFix() {
         Calculator calculator = new Calculator();

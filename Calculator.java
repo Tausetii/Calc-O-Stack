@@ -1,5 +1,9 @@
+/**
+ * A class that can calculate postfix and convert infix to postfix
+ */
 public class Calculator {
 
+    // For use in convertToPostfix
     private int getPrecedence(char value) {
         return switch (value) {
             case '+', '-' -> 1;
@@ -9,6 +13,11 @@ public class Calculator {
         };
     } // end getPrecedence
 
+    /**
+     * Converts an infix equation to postfix format
+     * @param infix A string containing an equation in infix format
+     * @return The resulting conversion to postfix (stored as a string)
+     */
     public String convertToPostfix(String infix) {
         StackInterface<Character> operatorStack = new LinkedStack<>();
         String postfix = "";
@@ -45,6 +54,11 @@ public class Calculator {
         return postfix;
     } // end convertToPostfix
 
+    /**
+     * Finds the solution to postfix equations
+     * @param postfix A string containing an equation in postfix format
+     * @return The solution to the equation (as a double)
+     */
     public double evaluatePostFix(String postfix){
         ResizableArrayStack<Double> valueStack = new ResizableArrayStack<>();
         double result;
